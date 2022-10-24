@@ -12,11 +12,16 @@
   <name>premier-projet-maven</name>
   <url>http://maven.apache.org</url>
 
+  <build>
+    <finalName>${project.artifactId}x</finalName>
+  </build>
+
   <!-- Encodage du projet en UTF-8 -->
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
+    <junit.version>3.8.1</junit.version>
   </properties>
 
   <!-- Dépendances -->
@@ -24,7 +29,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>${junit.version}</version> 
       <!-- La portée de la libraire JUnit est le test : Utile pour la compilation et l'éxécution des tests -->
       <scope>test</scope>
     </dependency>
